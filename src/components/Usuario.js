@@ -28,7 +28,6 @@ const Usuario = () =>{
             <input type="checkbox" value="true" name="terminos" checked={termContrato} onChange={handleTerminos}/>
             <label htmlFor="terminos">Acepto Términos de contrato</label><br/><br/>
             <button type="button">Guardar Nombre Usuario</button>
-            <br/>{termContrato}
         </>
         
     )
