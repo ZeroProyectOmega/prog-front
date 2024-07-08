@@ -10,7 +10,10 @@ const Usuario = () =>{
         Respuesta: evento.target.value
         */
         setNameUser(evento.target.value)
-    } 
+    }
+    const handleTerminos = () =>{
+        setTermContrato(!termContrato)
+    }
     return(
         <>
             <h1>Usuario</h1>
@@ -22,9 +25,10 @@ const Usuario = () =>{
                 <p>Ya existe ese Usuario</p>
             }
             <br/>
-            <input type="checkbox" value="true" name="terminos"/>
+            <input type="checkbox" value="true" name="terminos" checked={termContrato} onChange={handleTerminos}/>
             <label htmlFor="terminos">Acepto Términos de contrato</label><br/><br/>
             <button type="button">Guardar Nombre Usuario</button>
+            <br/>{termContrato}
         </>
         
     )
